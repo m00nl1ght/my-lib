@@ -1,0 +1,41 @@
+$primary: '#0e34cd';
+$secondary: '#b9b9b9';
+$white: '#ffffff';
+$black: '#000000';
+$small: '.75rem';
+$medium: '1.25rem';
+$large: '1.5rem';
+
+.ds-button {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  text-decoration: none;
+  outline: none;
+
+  // variant
+  &--primary {
+    background-color: $primary;
+    color: $white;
+  }
+  &--secondary {
+    background-color: $secondary;
+    color: $black;
+  }
+
+  // size
+  &--sm {
+    min-width: $small;
+  }
+  &--md {
+    min-width: $medium;
+  }
+  &--lg {
+    min-width: $large;
+  }
+}
