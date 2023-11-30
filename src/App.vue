@@ -1,6 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" style="display: flex; flex-direction: column">
     <DSButton variant="primary">My button</DSButton>
+
+    <MyButton style="margin-top: 10px"  variant="secondary">plugin button</MyButton>
+    <my-button style="margin-top: 10px"  variant="secondary">another button</my-button>
   </div>
 </template>
 

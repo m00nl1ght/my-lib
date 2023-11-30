@@ -10,8 +10,13 @@
     "build:vue:watch": "rollup -c --watch",
     "build:style": "sass --no-charset ./src/styles/index.scss | node ./build/print-banner.js > dist/ds-library.css && cleancss -o dist/ds-library.min.css dist/ds-library.css",
     "build:lib": "rimraf dist && npm run build:vue && npm run build:style",
-    "publish:lib": "npm run build:lib && npm publish"
+    "publish:lib": "npm run build:lib && npm publish",
+    "build:plugin": "vue-cli-service build --target lib --dest dist --mode plugin --name mylib.module --file mylib.module src/plugin.js"
   },
+  "main": "./dist/mylib.module.common",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
@@ -19,6 +24,7 @@
     "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
+    "@mylib": "^0.1.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
